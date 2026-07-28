@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ACTIVITY_FEED, type ActivityItem } from "@/lib/medina-data";
 import { Reveal } from "./anim";
 import { cn } from "@/lib/utils";
-import { Receipt, Building2, FileCheck2, Radio } from "lucide-react";
+import { Receipt, Building2, FileCheck2, Radio, Home, Store, HandCoins } from "lucide-react";
 
 const TYPE_META: Record<
   ActivityItem["type"],
@@ -13,6 +13,9 @@ const TYPE_META: Record<
   pajak: { color: "text-emerald-400", bg: "bg-emerald-500/15", icon: Receipt, label: "Pajak" },
   opd: { color: "text-cyan-400", bg: "bg-cyan-500/15", icon: Building2, label: "OPD" },
   perijinan: { color: "text-amber-400", bg: "bg-amber-500/15", icon: FileCheck2, label: "Izin" },
+  desa: { color: "text-amber-400", bg: "bg-amber-500/15", icon: Home, label: "Desa" },
+  umkm: { color: "text-emerald-400", bg: "bg-emerald-500/15", icon: Store, label: "UMKM" },
+  subsidi: { color: "text-cyan-400", bg: "bg-cyan-500/15", icon: HandCoins, label: "Subsidi" },
 };
 
 export function ActivityFeed() {

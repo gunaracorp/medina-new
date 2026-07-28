@@ -5,22 +5,21 @@ import { Quote } from "lucide-react";
 
 export function Vision() {
   return (
-    <section id="visi" className="relative py-20 lg:py-28 overflow-hidden">
+    <section id="visi" className="relative py-16 lg:py-24 overflow-hidden">
       <div className="absolute inset-0 bg-aurora opacity-50" />
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6 text-center">
         <Reveal>
           <Quote className="size-10 text-emerald-400/60 mx-auto mb-6" />
           <p className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold leading-[1.25] tracking-tight mb-8">
-            “Ekonomi yang adil bukan dibangun dengan{" "}
-            <span className="text-muted-foreground">kertas</span>, melainkan
-            dengan <span className="text-gradient-emerald">data yang mengalir</span>,
-            <span className="text-gradient-amber"> keputusan yang transparan</span>,
-            dan <span className="text-gradient-civic">warga yang diberdayakan</span>.”
+            “Transformasi Satu Portal Birokrasi & Keuangan Daerah menuju{" "}
+            <span className="text-gradient-emerald">Smart City</span>,{" "}
+            <span className="text-gradient-amber">Smart Village</span>, dan{" "}
+            <span className="text-gradient-civic">Indonesia Maju Adil Sejahtera</span>.”
           </p>
           <div className="inline-flex items-center gap-3">
             <div className="size-1.5 rounded-full bg-emerald-400" />
             <span className="text-sm text-muted-foreground uppercase tracking-[0.2em] font-semibold">
-              Filosofi MEDINA EKONOMI
+              Visi MEDINA EKONOMI
             </span>
           </div>
         </Reveal>
@@ -48,10 +47,10 @@ const VISION_POINTS = [
   },
   {
     title: "Cepat Karena Arsitektur",
-    desc: "Bukan janji cepat, tapi sistem yang memang dirancang cepat: paralel, otomatis, berbasis risiko.",
+    desc: "Bukan janji cepat, tapi sistem yang dirancang cepat: paralel, otomatis, berbasis risiko, satu pintu.",
   },
   {
     title: "Adil Karena Satu Data",
-    desc: "Satu kebenaran data untuk semua OPD. Tidak ada lagi perlakuan berbeda antar daerah, antar warga.",
+    desc: "Satu kebenaran data untuk 514 kab/kota, 38 provinsi, 75rb desa. Perlakuan sama, peluang sama.",
   },
 ];

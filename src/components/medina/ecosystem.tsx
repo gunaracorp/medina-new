@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ECOSYSTEM_NODES } from "@/lib/medina-data";
+import { ECOSYSTEM_NODES, ECOSYSTEM_DESCRIPTIONS, ECOSYSTEM_STATS } from "@/lib/medina-data";
 import { Reveal } from "./anim";
 import { cn } from "@/lib/utils";
 
@@ -183,11 +183,11 @@ export function Ecosystem() {
                 </div>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-5">
-                {NODE_DESCRIPTIONS[activeNode.id] ?? "Modul yang berinteraksi dengan MEDINA Core."}
+                {ECOSYSTEM_DESCRIPTIONS[activeNode.id] ?? "Modul yang berinteraksi dengan MEDINA Core."}
               </p>
 
               <div className="grid grid-cols-2 gap-3 mb-5">
-                {(NODE_STATS[activeNode.id] ?? []).map((s) => (
+                {(ECOSYSTEM_STATS[activeNode.id] ?? []).map((s) => (
                   <div key={s.label} className="rounded-xl bg-white/[0.03] border border-white/5 p-3">
                     <div className="text-[10px] uppercase tracking-wider text-muted-foreground mb-1">
                       {s.label}
@@ -210,81 +210,3 @@ export function Ecosystem() {
     </section>
   );
 }
-
-const NODE_DESCRIPTIONS: Record<string, string> = {
-  core: "Otak ekosistem. Mediator seluruh transaksi antar modul. Menjamin konsistensi data, audit trail, dan kebijakan akses lintas modul.",
-  pajak: "Mesin penerimaan daerah. Mengelola seluruh siklus: penetapan, penagihan, penyetoran, hingga rekonsiliasi otomatis ke RKUD.",
-  opd: "Satu Data Daerah. Master data tunggal untuk warga, aset, keuangan, dan layanan lintas 514 OPD nasional.",
-  perijinan: "OSS-Plus. Satu pintu untuk 1.482 jenis izin. Persetujuan paralel lintas OPD dengan SLA publik.",
-  rkud: "Rekening Kas Umum Daerah live. Saldo, mutasi, dan posisi kas terlihat per detik oleh pengawas.",
-  wp: "WargaID. Identitas digital tunggal. Satu login untuk seluruh layanan pemerintah di 514 daerah.",
-  tte: "Tanda Tangan Elektronik berqualified-certificate. Sah secara hukum, tanpa paper, tanpa stempel basah.",
-  ai: "Lapisan kognitif. Prediksi penerimaan, deteksi fraud, rekomendasi kebijakan, dan koordinasi renja OPD.",
-  chain: "ChainLedger. Audit trail tak terhapus untuk setiap transaksi. Audit instan, investigasi cepat.",
-  open: "Open API Nasional. 312 endpoint publik untuk interoperabilitas pusat-daerah-swasta.",
-  insight: "InsightBI. Analitik eksekutif untuk kepala daerah. KPI lintas OPD, tren ekonomi, peringatan dini.",
-  ops: "Ops Center 24/7. Komando operasional dengan auto-remediation. Insiden terdeteksi sebelum warga merasakan.",
-  secure: "ZeroTrust. Setiap permintaan diverifikasi, setiap identitas divalidasi. Tidak ada trust default.",
-  mobile: "Medina Go. Super app warga. Pajak, izin, pengaduan, dan informasi publik dalam satu aplikasi.",
-};
-
-const NODE_STATS: Record<string, { label: string; value: string }[]> = {
-  core: [
-    { label: "Throughput", value: "9,2 M/s" },
-    { label: "Latency p99", value: "38 ms" },
-    { label: "Uptime", value: "99,98%" },
-    { label: "Modul Tersambung", value: "14" },
-  ],
-  pajak: [
-    { label: "Penerimaan YTD", value: "Rp 61,9 T" },
-    { label: "WP Aktif", value: "4,82 jt" },
-  ],
-  opd: [
-    { label: "OPD", value: "514" },
-    { label: "Dataset", value: "12.840" },
-  ],
-  perijinan: [
-    { label: "Jenis Izin", value: "1.482" },
-    { label: "Rata-rata", value: "3,2 hr" },
-  ],
-  rkud: [
-    { label: "Rekening", value: "514" },
-    { label: "Saldo Live", value: "Rp 124 T" },
-  ],
-  wp: [
-    { label: "Warga", value: "62,1 jt" },
-    { label: "SSO Daerah", value: "514" },
-  ],
-  tte: [
-    { label: "Pejabat", value: "1,2 jt" },
-    { label: "Dokumen/hari", value: "8,4 jt" },
-  ],
-  ai: [
-    { label: "Model AI", value: "14" },
-    { label: "Prediksi/hari", value: "312 rb" },
-  ],
-  chain: [
-    { label: "Transaksi", value: "2,4 m/disk" },
-    { label: "Immutability", value: "100%" },
-  ],
-  open: [
-    { label: "Endpoint", value: "312" },
-    { label: "Konsumen", value: "12 rb" },
-  ],
-  insight: [
-    { label: "Dashboard", value: "514" },
-    { label: "KPI", value: "8.420" },
-  ],
-  ops: [
-    { label: "Layanan", value: "24/7" },
-    { label: "MTTR", value: "< 6 mnt" },
-  ],
-  secure: [
-    { label: "Threat blocked", value: "42 M/bln" },
-    { label: "Insiden", value: "0 kritikal" },
-  ],
-  mobile: [
-    { label: "Pengguna", value: "38 jt" },
-    { label: "Layanan", value: "212" },
-  ],
-};
