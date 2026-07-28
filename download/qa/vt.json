@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Based on the image provided, here is the breakdown of the 6-step **Alur Pajak** (Tax Flow) timeline:\n\n**General Observations:**\n*   **Step Numbers (a):** Yes, all step numbers **01 through 06** are clearly visible in teal circles above each icon.\n*   **Titles/Labels (b):** Yes, every step has a bold title/label directly beneath the icon.\n*   **Descriptive Text (c):** Yes, every step includes a descriptive paragraph below the title.\n*   **Overflow/Cropping:** There is minor text overflow in the final summary box at the bottom (\"sebelumnya 3-7 hari\" appears to be struck-through or overlapping), but the 6 timeline steps themselves appear fully rendered without cropping.\n\n---\n\n### Step-by-Step Details:\n\n**Step 01: Wp Bayar**\n*   **Number:** 01\n*   **Title:** Wp Bayar\n*   **Description:** \"Wajib pajak setor via Medina Go / bank / QRIS. e-Billing terbit otomatis.\"\n*   **Metric:** $\\ge$ 30 detik\n\n**Step 02: Validasi**\n*   **Number:** 02\n*   **Title:** Validasi\n*   **Description:** \"Sistem verifikasi NPWPD, nominal, dan kode billing. AI cek anomali.\"\n*   **Metric:** $\\ge$ 15 detik\n\n**Step 03: e-NTPD**\n*   **Number:** 03\n*   **Title:** e-NTPD\n*   **Description:** \"Bukti setor elektronik terbit, terkunci ke ChainLedger daerah.\"\n*   **Metric:** $\\ge$ 10 detik\n\n**Step 04: Rekonsiliasi**\n*   **Number:** 04\n*   **Title:** Rekonsiliasi\n*   **Description:** \"Sistem match otomatis WP ... bank ... RKUD. Tanpa rekonsiliasi manual.\" *(Note: The text uses ellipses \"...\" indicating abbreviated content)*\n*   **Metric:** real-time\n\n**Step 05: Posting RKUD**\n*   **Number:** 05\n*   **Title:** Posting RKUD\n*   **Description:** \"Saldo kas daerah ter-update. Dashboard pengawas langsung terefresh.\"\n*   **Metric:** real-time\n\n**Step 06: Insight**\n*   **Number:** 06\n*   **Title:** Insight\n*   **Description:** \"InsightBI agregasi perintmaan. Prediksi & deteksi fraud berjalan.\" *(Note: \"perintmaan\" appears to be a typo for \"permintaan\" or similar)*\n*   **Metric:** live",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1785213167,
+  "id": "20260728123240e3b448c3410645df",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20260728123240e3b448c3410645df",
+  "usage": {
+    "completion_tokens": 584,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1157,
+    "prompt_tokens_details": {
+      "cached_tokens": 4
+    },
+    "total_tokens": 1741
+  }
+}
